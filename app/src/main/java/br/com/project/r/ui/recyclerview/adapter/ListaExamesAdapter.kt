@@ -5,30 +5,32 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import br.com.project.r.databinding.ExameItemBinding
-import br.com.project.r.model.Exame
+import br.com.project.r.model.Cliente
 import java.math.BigDecimal
 import java.text.NumberFormat
 import java.util.Locale
 
 class ListaExamesAdapter(
     private val context: Context,
-    exames: List<Exame>
+    clientes: List<Cliente>
 ) : RecyclerView.Adapter<ListaExamesAdapter.ViewHolder>() {
 
-    private val exames = exames.toMutableList()
+    private val exames = clientes.toMutableList()
 
     class ViewHolder(private val binding: ExameItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
-        fun vincula(exame: Exame) {
-            val nome = binding.exameItemNome
-            nome.text = exame.nome
+        fun vincula(cliente: Cliente) {
+            val paciente = binding.exameItemCliente
+            paciente.text = cliente.paciente
             val descricao = binding.exameItemDescricao
-            descricao.text = exame.descricao
+            descricao.text = cliente.descricao
             val horario = binding.exameItemHorario
-            horario.text = exame.horario
+            horario.text = cliente.horario
+            val solicitante = binding.exameItemSolicitante
+            solicitante.text = cliente.solicitante
             val valor = binding.exameItemValor
-            val valorEmMoeda: String = formataParaMoedaBrasileira(exame.valor)
+            val valorEmMoeda: String = formataParaMoedaBrasileira(cliente.valor)
             valor.text = valorEmMoeda
         }
 
@@ -52,9 +54,9 @@ class ListaExamesAdapter(
 
     override fun getItemCount(): Int = exames.size
 
-    fun atualiza(exames: List<Exame>) {
+    fun atualiza(clientes: List<Cliente>) {
         this.exames.clear()
-        this.exames.addAll(exames)
+        this.exames.addAll(clientes)
         notifyDataSetChanged()
     }
 

@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import br.com.project.r.R
 import br.com.project.r.dao.ExamesDao
 import br.com.project.r.databinding.ActivityFormularioExameBinding
-import br.com.project.r.model.Exame
+import br.com.project.r.model.Cliente
 import java.math.BigDecimal
 
 class FormularioExameActivity :
@@ -34,13 +34,15 @@ class FormularioExameActivity :
 
     }
 
-    private fun criaExame(): Exame {
+    private fun criaExame(): Cliente {
         val campoNome = binding.activityFormularioExameNome
         val nome = campoNome.text.toString()
         val campoDescricao = binding.activityFormularioExameDescricao
         val descricao = campoDescricao.text.toString()
         val campoHorario = binding.activityFormularioExameHorario
         val horario = campoHorario.text.toString()
+        val campoSolicitante = binding.activityFormularioExameSolicitante
+        val solicitante = campoSolicitante.text.toString()
         val campoValor = binding.activityFormularioExameValor
         val valorEmTexto = campoValor.text.toString()
         val valor = if (valorEmTexto.isBlank()) {
@@ -49,10 +51,11 @@ class FormularioExameActivity :
             BigDecimal(valorEmTexto)
         }
 
-        return Exame(
-            nome = nome,
+        return Cliente(
+            paciente = nome,
             descricao = descricao,
             horario = horario,
+            solicitante = solicitante,
             valor = valor
         )
     }

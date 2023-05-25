@@ -16,7 +16,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
-            android:hint="Exame"
+            android:hint="Paciente"
             android:inputType="text"
             android:minHeight="48dp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -49,15 +49,27 @@
             android:autofillHints="" />
 
         <EditText
+            android:id="@+id/activity_formulario_exame_solicitante"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Solicitante"
+            android:inputType="text"
+            android:minHeight="48dp"
+            app:layout_constraintEnd_toEndOf="@id/activity_formulario_exame_horario"
+            app:layout_constraintStart_toStartOf="@id/activity_formulario_exame_horario"
+            app:layout_constraintTop_toBottomOf="@id/activity_formulario_exame_horario"
+            android:autofillHints="" />
+
+        <EditText
             android:id="@+id/activity_formulario_exame_valor"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:hint="Valor"
             android:inputType="numberDecimal"
             android:minHeight="48dp"
-            app:layout_constraintEnd_toEndOf="@id/activity_formulario_exame_horario"
-            app:layout_constraintStart_toStartOf="@id/activity_formulario_exame_horario"
-            app:layout_constraintTop_toBottomOf="@id/activity_formulario_exame_horario"
+            app:layout_constraintEnd_toEndOf="@id/activity_formulario_exame_solicitante"
+            app:layout_constraintStart_toStartOf="@id/activity_formulario_exame_solicitante"
+            app:layout_constraintTop_toBottomOf="@id/activity_formulario_exame_solicitante"
             android:autofillHints="" />
 
         <Button android:id="@+id/activity_formulario_exame_botao_salvar"

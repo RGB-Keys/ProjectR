@@ -10,7 +10,7 @@ import br.com.project.r.ui.recyclerview.adapter.ListaExamesAdapter
 class RegistraExameActivity : AppCompatActivity() {
 
     private val dao = ExamesDao()
-    private val adapter = ListaExamesAdapter(context = this, exames = dao.buscaTodos())
+    private val adapter = ListaExamesAdapter(context = this, clientes = dao.buscaTodos())
 
     private val binding by lazy {
 
