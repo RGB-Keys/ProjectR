@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "987005473553",
+    "project_id": "projectr-c3997",
+    "storage_bucket": "projectr-c3997.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:987005473553:android:76fc4d0e43ea5497ec32b0",
+        "android_client_info": {
+          "package_name": "br.com.project.r"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "987005473553-c2q2bdfc1ufqh7bmf0vuqht7j82p9gfq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBizQu6mgWAkB1DpsSOTMMYt06xA2bikao"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "987005473553-c2q2bdfc1ufqh7bmf0vuqht7j82p9gfq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
