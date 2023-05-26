@@ -15,6 +15,7 @@
         <activity
             android:name=".ui.activity.RegistraExameActivity"
             android:exported="true" />
+        <activity android:name=".ui.activity.ListaVagasActivity" />
         <activity
             android:name=".ui.activity.MainActivity"
             android:exported="true">
