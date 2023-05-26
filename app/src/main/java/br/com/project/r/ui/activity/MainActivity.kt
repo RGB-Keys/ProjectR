@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity() {
                 myRef.setValue("Hello, World!")
             }
             if(edNome.text.toString()=="UserAdmin") {
-                val inten = Intent(this, CadastroVagaActivity::class.java)
+                val inten = Intent(this, ListaVagasActivity::class.java)
                 val texto = edNome.text.toString()
                 inten.putExtra("nome", texto)
                 startActivity(inten)

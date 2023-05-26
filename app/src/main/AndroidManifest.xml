@@ -9,13 +9,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjectR">
         <activity
+            android:name=".ui.recyclerview.adapter.EmpAdapter"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activity.ListaVagasActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.activity.CadastroVagaActivity"
             android:exported="false" />
         <activity android:name=".ui.activity.FormularioExameActivity" />
         <activity
             android:name=".ui.activity.RegistraExameActivity"
             android:exported="true" />
-        <activity android:name=".ui.activity.ListaVagasActivity" />
         <activity
             android:name=".ui.activity.MainActivity"
             android:exported="true">
